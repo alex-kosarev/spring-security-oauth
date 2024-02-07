@@ -1,0 +1,26 @@
+server:
+  port: 8082
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:18080/realms/sandbox
+            user-name-attribute: preferred_username
+        registration:
+          greetings-app-client-credentials:
+            provider: keycloak
+            authorization-grant-type: client_credentials
+            client-id: reactive-greetings-app
+            client-secret: a4f6YMu2ZgAQcfOOkdugHmJVqUlL5KeW
+            scope:
+              - greetings
+          greetings-app-authorization-code:
+            provider: keycloak
+            client-id: reactive-greetings-app
+            client-secret: a4f6YMu2ZgAQcfOOkdugHmJVqUlL5KeW
+            scope:
+              - greetings
+              - openid
+              - microprofile-jwt
