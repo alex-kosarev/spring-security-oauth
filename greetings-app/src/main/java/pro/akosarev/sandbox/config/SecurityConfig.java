@@ -12,7 +12,6 @@ import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
 import org.springframework.security.oauth2.core.oidc.user.DefaultOidcUser;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.stereotype.Controller;
 
 import java.util.List;
 import java.util.stream.Stream;
